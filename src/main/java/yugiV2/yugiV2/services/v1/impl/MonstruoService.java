@@ -109,4 +109,9 @@ public class MonstruoService implements IMonstruo {
             return true;
         }
     }
+
+    public List<Monstruo> buscarPorNombre(String nombre){
+        return repositorio.findByNombreIgnoringCaseContaining(nombre.toUpperCase());
+    }
+
 }
